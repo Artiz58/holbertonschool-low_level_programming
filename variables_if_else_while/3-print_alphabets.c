@@ -13,7 +13,7 @@ int main(void)
         {
                 putchar (abc);
         }
-	while (ABC = 'A'; ABC <= 'Z'; ABC++)
+	for (ABC = 'A'; ABC <= 'Z'; ABC++)
 	{
 		putchar (ABC);
 	}	
