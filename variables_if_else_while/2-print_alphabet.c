@@ -12,7 +12,7 @@ int main(void)
 	for (abc = 'a'; abc <= 'z'; abc++)
 	{
 		puchar (abc);
-	} 
+	}
 	puchar ('\n');
 
 	return (0);
