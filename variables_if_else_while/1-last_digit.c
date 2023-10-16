@@ -13,13 +13,13 @@ int main(void)
 	/* your code goes there */
 	if (n > 5)
 	{
-		printf("and %d is greater than 5\n", n);
+		printf("%d and n is greater than 5\n", n);
 	}
 	else if (n == 0){
-		printf("and %d is 0\n", n);
+		printf("%d and n is 0\n", n);
 	}
 	else{
-		printf("and %d is less than 6 and not 0\n", n);
+		printf("%d and n is less than 6 and not 0\n", n);
 	}
 
 	return (0);
