@@ -11,9 +11,9 @@ int main(void)
 
 	for (abc = 'a'; abc <= 'z'; abc++)
 	{
-		puchar (abc);
+		putchar (abc);
 	}
-	puchar ('\n');
+	putchar ('\n');
 
 	return (0);
 }
