@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_sign - 
+ * print_sign - Print de value number of ACSII.
+ * @n: The character to be checked.
  *
  * Return: 1 print sign.
  */
