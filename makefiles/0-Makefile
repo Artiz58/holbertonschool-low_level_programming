@@ -1,0 +1,17 @@
+CC = gcc
+CFLAGS = -Wall -std=c11
+LDFLAGS =
+SRC = school.c
+OBJ = $(SRC:.c=.o)
+EXECUTABLE = school
+
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJ)
+	$(CC) $(LDFLAGS) $(OBJ) -o $@
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm -f $(EXECUTABLE) $(OBJ)
