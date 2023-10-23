@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * _puts - Prints a string, followed by a new line, to stdout.
+ * _puts - Prints a string
  * @str: The string to be printed.
  *
- *Return: 0
+ * Return: void
  */
 void _puts(char *str)
 {
@@ -13,5 +13,6 @@ void _puts(char *str)
 	{
 		_putchar(*str);
 	}
+
 	_putchar('\n');
 }
