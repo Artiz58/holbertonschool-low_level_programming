@@ -2,9 +2,11 @@
 #include <string.h>
 
 /**
+ * _strcpy - Copy a source string to a destination buffer.
+ * @dest: Pointer to the destination buffer.
+ * @src: Pointer to the source string.
  *
- *
- *
+ * Return: A pointer to the destination buffer.
  */
 char *_strcpy(char *dest, char *src)
 {
