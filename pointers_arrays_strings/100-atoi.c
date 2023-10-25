@@ -7,32 +7,31 @@
  *@s: stores string
  * Return: int value of string text
  */
-int _atoi(char *s)
-{
-	int j = 0, i = 0;
-	int signo = 1;
-	int result = 0;
+int _atoi(char *s) {
+    int result = 0;
+    int sign = 1;
+    int i = 0;
 
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	i--;
-	for (j = 0; j <= i; j++)
-	{
-		if (s[j] == '-')
-		{
-			signo *= -1;
-		}
-		if ((s[j] >= '0' && s[j] <= '9'))
-		{
-			result = result * 10 + (s[j] - '0');
-			if (s[j + 1] < '0' || s[j + 1] > '9')
-			{
-				j = i + 1;
-			}
-		}
-	}
-	result = result * signo;
-	return (result);
+    while (s[i] != '\0' && (s[i] < '0' || s[i] > '9')) {
+        if (s[i] == '-') {
+            sign = -sign;
+        }
+        i++;
+    }
+
+  
+    while (s[i] >= '0' && s[i] <= '9') {
+        int digit = s[i] - '0';
+        
+   
+        if (result > (2147483647 - digit) / 10) {
+          
+            return (sign == 1) ? 2147483647 : -2147483648;
+        }
+
+        result = result * 10 + digit;
+        i++;
+    }
+
+    return result * sign;
 }
