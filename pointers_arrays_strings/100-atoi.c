@@ -28,7 +28,8 @@ int _atoi(char *s)
 		if (s[j] >= '0' && s[j] <= '9')
 	{
 
-		if (result > INT_MAX / 10 || (result == INT_MAX / 10 && (s[j] - '0') > INT_MAX % 10))
+		if (result > INT_MAX / 10 || (result == INT_MAX / 10
+					&& (s[j] - '0') > INT_MAX % 10))
 		{
 			if (signo == 1)
 			{
@@ -47,5 +48,5 @@ int _atoi(char *s)
 	}
 	}
 	result = result * signo;
-	return result;
+	return (result);
 }
