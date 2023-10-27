@@ -1,13 +1,16 @@
 #include "main.h"
 
 /**
+ * _strstr - locates a substring.
+ * @haystack: imput value
+ * @needle: imput value
  *
- *
+ * Return: haystack
  */
 char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack)
-    {
+	{
 	char *start = haystack;
 	char *sub = needle;
 
@@ -18,10 +21,11 @@ char *_strstr(char *haystack, char *needle)
 	}
 
 	if (!*sub)
-		return start;
+
+		return (start);
 
 	haystack = start + 1;
-    }
+	}
 
-    return (haystack);
+return (haystack);
 }
