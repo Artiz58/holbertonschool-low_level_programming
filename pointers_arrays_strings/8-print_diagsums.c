@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- *print_diagsums - Adds the diagonal of the matrix
+ * print_diagsums - Adds the diagonal of the matrix
  *
- *@a: pointer to size
- *@size: size of matrix
+ * @a: pointer to size
+ * @size: size of matrix
  */
 
 void print_diagsums(int *a, int size)
