@@ -1,8 +1,12 @@
 #include "main.h"
 
 /**
+ * _memcpy - copies memory area.
+ * @dest: imput value
+ * @src: imput value
+ * @n: imput value
  *
- *
+ * Return: dest value
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
