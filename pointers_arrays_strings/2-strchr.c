@@ -1,8 +1,11 @@
 #include "main.h"
 
 /**
+ * _strchr - locates a character in a string.
+ * @s: imput value
+ * @c: imput value
  *
- *
+ * Return: 0
  */
 
 char *_strchr(char *s, char c)
