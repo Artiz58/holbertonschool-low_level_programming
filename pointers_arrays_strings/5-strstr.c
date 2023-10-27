@@ -5,7 +5,6 @@
  * _strstr - locates a substring.
  * @haystack: input value
  * @needle: input value
- *
  * Return: pointer to the first
  * occurrence of the substring, or NULL if not found
  */
@@ -20,6 +19,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			char *haystack_ptr_tmp = haystack_ptr + 1;
 			char *needle_ptr_tmp = needle_ptr + 1;
+
 			while (*haystack_ptr_tmp != '\0' && *needle_ptr_tmp != '\0')
 			{
 				if (*haystack_ptr_tmp != *needle_ptr_tmp)
@@ -29,12 +29,12 @@ char *_strstr(char *haystack, char *needle)
 				haystack_ptr_tmp++;
 				needle_ptr_tmp++;
 			}
-			if (*needle_ptr_tmp == '\0') 
+			if (*needle_ptr_tmp == '\0')
 			{
-				return haystack_ptr;
+				return (haystack_ptr);
 			}
 		}
 		haystack_ptr++;
 	}
-	return NULL;
+	return (NULL);
 }
