@@ -1,4 +1,9 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
+
+
 
 /**
  * alloc_grid - Function tha
