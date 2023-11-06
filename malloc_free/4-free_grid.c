@@ -1,5 +1,7 @@
 #include "main.h"
-
+#include <stdlib.h>
+#include <stddef.h>
+#include <string.h>
 /**
  * free_grid - Write a function that
  * frees a 2 dimensional grid previously
