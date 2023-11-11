@@ -1,3 +1,7 @@
+/**
+ * struct dog - info about dog
+ *
+ */
 #ifndef DOG_H
 #define DOG_H
 
