@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(2, "Got: %d\n", 98);
 		exit(98);
 	}
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -30,12 +31,18 @@ int main(int argc, char *argv[])
 	}
 	while ((br = read(fd_from, buff, sizeof(buff))) > 0)
 	{
-		bw = write(fd_to, &buff, br);
+		bw = write(fd_to, buff, br);
 		if (bw != br)
 		{
 			dprintf(2, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
+	}
+	if (br < 0)
+	{
+		dprintf(2, "Error: Can't read from files %s\n", argv[1]);
+		dprintf(2, "Got: %d\n", 98);
+		exit(98);
 	}
 	if (close(fd_from) == -1 || close(fd_to) == -1)
 	{
