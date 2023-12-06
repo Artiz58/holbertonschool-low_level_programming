@@ -22,26 +22,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(c->value);
 			c->value = strdup(value);
 			if (c->value == NULL)
-				return (0);
-			return (1);
+				return (c->value ? 1 : 0);
 		}
-		c = c->next;
 	}
 	nn = malloc(sizeof(hash_node_t));
 	if (nn == NULL)
-	{
 		return (0);
-	}
 	nn->key = strdup(key);
-	if (nn->key == NULL)
-	{
-		free(nn);
-		return (0);
-	}
 	nn->value = strdup(value);
-	if (nn->value == NULL)
+	if (nn->key == NULL || nn->value == NULL)
 	{
 		free(nn->key);
+		free(nn->value);
 		free(nn);
 		return (0);
 	}
