@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 /**
  * main - Copies the content of a file to another file.
@@ -15,8 +13,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-		exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	}
 	source = open(argv[1], O_RDONLY);
 	if (source == -1)
@@ -46,7 +43,6 @@ int main(int argc, char *argv[])
 	}
 	if (close(source) == -1)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", source), exit(100);
-
 	if (close(dest) == -1)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", dest), exit(100);
 
