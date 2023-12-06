@@ -6,6 +6,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <string.h>
+#include <libgen.h>
 
 size_t _strlen(const char *s);
 ssize_t read_textfile(const char *filename, size_t letters);
